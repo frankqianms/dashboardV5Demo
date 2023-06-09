@@ -13,7 +13,7 @@ interface IListWidgetState {
 
 export default class ListWidget extends BaseWidget<any, IListWidgetState> {
   async getData(): Promise<IListWidgetState> {
-    return { data: getListData() };
+    return { data: await getListData() };
   }
 
   header(): JSX.Element | undefined {
